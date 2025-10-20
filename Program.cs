@@ -3,6 +3,12 @@ using TrilhaNetAzureDesafio.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// temporario
+var conn = builder.Configuration.GetConnectionString("ConexaoPadrao");
+Console.WriteLine($">>> CONNECTION: {conn}");
+
+// temporario
+
 // Add services to the container.
 builder.Services.AddDbContext<RHContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
